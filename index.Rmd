@@ -1,0 +1,25 @@
+---
+title: "Introduction"
+---
+
+## Introduction
+(Note: this is an extension of my BDS 501 group project, which examined how dishonest leaders can affect dishonest behavior in followers.)
+
+Behaviors are contagious. From quitting smoking to divorce, researchers have found that we are more likely to adopt the behaviors that we see others engaging in (McDermott, Fowler & Christakis, 2009). In the wake of recent corporate scandals, scholars and practitioners have become increasingly convinced that such a behavioral contagion effect exists in the context of ethics and leadership as well (Trevino, Brown & Hartman, 2003): to a large degree, employees tend to calibrate their behavior according to their leader’s actions (“When something is rotten”, 2002). Despite this general consensus, the relationship between leader behavior and (un)ethical conduct among followers has only recently been examined experimentally and is still not fully understood (d’Adda et al., 2017). 
+
+A particular limitation of past research that examines the relationship between leader and follower behavior, is that the majority of studies have relied on indirect mechanisms to make a leader’s behavior known to other participants. Indirect mechanisms refer to the use of public announcements by leaders to convey their decisions to others; indirect mechanisms also encompass the use of incentives to induce certain behavior among followers (d’Adda et al., 2017). While these techniques do reflect some strategies that leaders utilize in real life, it is also common for leaders to directly act in a way that sets an observable precedent for the rest of the company to follow. Interestingly, this type of leader strategy seems to appear in many high-profile corporate scandals, such as the case of WorldCom or Theranos, where top executives tend to take unethical actions into their own hands (such as by overinflating financial performance), which in turn often triggers a “trickle-down” effect among employees who then also engage in unethical practices (such by writing fraudulent reports to mislead investors) (Tran, 2002). This notion that followers, in a sense, adopt behaviors by directly observing their leader’s actions could play an important role in explaining how behavior is diffused within an organization, especially when such behavior is unethical. 
+
+In order to test this relationship, we utilize a repeated dice game, similar to the one used by d’Adda et al. (2017). The basic repeated game works in the following manner: in each round, followers privately roll a dice and then publicly report their dice roll (either accurately or not depending on the direction of their leader’s encouragement); the rounds proceed in the same way until the game is over. In our study, however, we modify this set up and procedure such that the dice game is played in teams of four individuals, i.e. three followers and one randomly assigned leader. The followers must report their (private) dice rolls to the leader, who then calculates the total team score i.e. the sum of the three follower’s reported dice roll. This set up is novel as leaders publicly calculate the team’s total performance, i.e. on a whiteboard, in order to make the leader’s actions directly observable by the entire team. Depending on the treatment, the leader either accurately calculates the correct team score, or he or she records an inflated team score by adding an additional small or large value to the team total. 
+
+Based on our set-up, leaders could influence unethical follower behavior through two channels; it might be the case that the mere existence of leader dishonesty might be sufficient induce followers to imitate their leader and cheat as well. Another potential channel may be that a higher magnitude of leader cheating behavior might make the option to cheat more salient and acceptable to followers. In this case, followers would have a larger range of opportunity to also cheat, which might also increase the level of cheating.
+
+A potentially interesting dimension to explore within this study--and for the purposes of this project--is whether or not there are significant differences in cheating behavior across followers of different races. In particular, will followers of a certain race be more inclined to cheat when they observe their leader cheating? This question may be interesting because they are particularly relevant given the current (unfortunate) social and political climate in the United States, and given the sharp increase in overt racism and racial stereotyping in the country. 
+
+### Hypotheses
+My research hypotheses are as follows:
+
+$H_0$ = there will be no significant difference in cheating behavior among followers of different races when they observe their leader cheating.
+
+$H_1$ = there will be a difference in cheating behavior among followers of different races when they observe their leader cheating.
+
+

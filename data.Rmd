@@ -1,0 +1,72 @@
+---
+title: "Data and Methods"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(latexpdf)
+library(compareGroups)
+library(summarytools)
+library(Rmisc)
+setwd("/Users/SuburbanFoxes/Downloads/Website_template")
+MyData <- read_csv("/Users/SuburbanFoxes/Downloads/Website_template/NewData1 - 1.csv")
+MyData$reportavg<-(MyData$report2+MyData$report3+MyData$report4+MyData$report5+MyData$report6+MyData$report7)/6
+MyData$rollavg<-(MyData$`Roll-2A`+MyData$`Roll-2B`+MyData$`Roll-3A`+MyData$`Roll-3B`+MyData$`Roll-4A`+MyData$`Roll-4B`+MyData$`Roll-5A`+MyData$`Roll-5B`+MyData$`Roll-6A`+MyData$`Roll-6B`+MyData$`Roll-7A`+MyData$`Roll-7B`)/6
+MyData$CheatTotal<-MyData$reportavg-MyData$rollavg
+Control<-subset.data.frame(MyData,MyData$teamID==1|MyData$teamID==4|MyData$teamID==6|MyData$teamID==10|MyData$teamID==13|MyData$teamID==14|MyData$teamID==19|MyData$teamID==22|MyData$teamID==25|MyData$teamID==28|MyData$teamID==31|MyData$teamID==34|MyData$teamID==37|MyData$teamID==40|MyData$teamID==43|MyData$teamID==48|MyData$teamID==49)
+LowCheat<-subset.data.frame(MyData,MyData$teamID==2|MyData$teamID==5|MyData$teamID==8|MyData$teamID==11|MyData$teamID==15|MyData$teamID==16|MyData$teamID==20|MyData$teamID==23|MyData$teamID==26|MyData$teamID==29|MyData$teamID==32|MyData$teamID==35|MyData$teamID==38|MyData$teamID==41|MyData$teamID==44|MyData$teamID==47|MyData$teamID==50)
+HighCheat<-subset.data.frame(MyData,MyData$teamID==3|MyData$teamID==7|MyData$teamID==9|MyData$teamID==12|MyData$teamID==17|MyData$teamID==18|MyData$teamID==21|MyData$teamID==24|MyData$teamID==27|MyData$teamID==30|MyData$teamID==33|MyData$teamID==36|MyData$teamID==39|MyData$teamID==42|MyData$teamID==45|MyData$teamID==46|MyData$teamID==51)
+Control$Condition<-"Control"
+LowCheat$Condition<-"Low Cheat"
+HighCheat$Condition<-"High Cheat"
+FinalData<-rbind(Control,LowCheat,HighCheat)
+```
+
+## Data and Methods
+
+### Data
+
+The data that will be used for this analysis has been collected by my team members and I as part of our BDS 501 project. We conducted our experiment at Penn on both undergraduate and graduate Penn students. In total, we had a total of 205 participants, which can be further broken down into 51 teams comprising of 51 leaders and 154 followers. Since we are only interested in follower behavior, we have a total of 150 observations (accounting for a few cases where participants had to be excluded due to the leader not following instructions). The relevant data which has been broadly organized by types and their respective categories can be seen in the table below. 
+
+Data  | Type
+------------- | -------------
+Participant ID | Categorical
+Pre-survey Results | Ordinal/Categorical
+Treatment Group | Categorical
+Dice Results | Ratio
+Individual reported results | Ratio
+Team reported results | Ratio
+Post-survey results | Ordinal/Categorical
+Demographics | Categorical
+
+An additional breakdown of participants' race by condition can be seen below. In the Control condition, the leader reports the team score accurately (i.e. add 0 to the final team score); in the Low Cheat condition, the leader overreports the team score slightly (i.e. add 1-4 to the final team score); and in the High Cheat condition, the leader overreports the team score by a lot (i.e. add 5-9 to the final team score). 
+```{r echo=FALSE}
+Descriptives2 <- compareGroups(Condition ~ race + age, data=FinalData)
+
+Descriptives2Table <- createTable(Descriptives2, show.n=TRUE, show.p.overall=FALSE)
+export2html(Descriptives2Table)
+```
+
+
+Included below is also some summary statistics on the average amount cheated by followers, broken down by condition.
+
+```{r echo=FALSE, results='asis'}
+Descriptives1 <- with(FinalData,
+                      by(avgcheat, Condition, descr, 
+                         stats = c("mean", "sd", "min", "med", "max", "IQR")))
+view(Descriptives1, "pander", ctable.totals=TRUE, style="rmarkdown")
+```
+
+Finally, a boxplot showing the distribution of average cheating across the different race groups for all treatments in our study is below. 
+```{r echo=FALSE}
+boxplot(avgcheat~race, data=FinalData, main="Average Cheating by Race")
+```
+
+### Methods
+
+For the purposes of testing my hypotheses, I will be using an ANOVA to see if there are any significant differences in cheating behavior among followers of differenct races across all conditions. I will be specifically looking to see if significant differences in the average amount cheated for different races exist. I will also run Tukey's HSD to provide a breakdown of which specific groups's means compared with each other are different (if there are any). Using an ANOVA is an appropriate method since I will be testing for differences between two or more means, or in my context, racial groups. Running a Tukey's HSD is also an appropriate, though potentially unnecessary post-hoc test since it usually accompanies an ANOVA test.
+
+

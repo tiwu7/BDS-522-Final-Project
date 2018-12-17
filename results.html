@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Results</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">BDS 522 Final Project</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Introduction</a>
+</li>
+<li>
+  <a href="data.html">Data and Methods</a>
+</li>
+<li>
+  <a href="results.html">Results</a>
+</li>
+<li>
+  <a href="conclusion.html">Conclusion</a>
+</li>
+<li>
+  <a href="references.html">References</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Results</h1>
+
+</div>
+
+
+<div id="results" class="section level2">
+<h2>Results</h2>
+<p>Below are the results from the ANOVA and post-hoc Tukey’s HSD.</p>
+<p>Across all conditions:</p>
+<pre><code>##                         Df Sum Sq Mean Sq F value Pr(&gt;F)
+## factor(FinalData$race)   4   8.02   2.005   1.514  0.201
+## Residuals              145 192.07   1.325</code></pre>
+<pre><code>##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = FinalData$avgcheat ~ factor(FinalData$race))
+## 
+## $`factor(FinalData$race)`
+##                                         diff        lwr       upr
+## Asian-African American           -0.14052795 -1.3124298 1.0313739
+## Caucasian-African American        0.39228111 -0.8684911 1.6530533
+## Hispanic/Latinx-African American -0.07738095 -1.5285217 1.3737598
+## Other-African American           -0.46683673 -2.1122757 1.1786022
+## Caucasian-Asian                   0.53280906 -0.1274402 1.1930584
+## Hispanic/Latinx-Asian             0.06314700 -0.9126563 1.0389503
+## Other-Asian                      -0.32630878 -1.5728448 0.9202272
+## Hispanic/Latinx-Caucasian        -0.46966206 -1.5505805 0.6112564
+## Other-Caucasian                  -0.85911784 -2.1895480 0.4713123
+## Other-Hispanic/Latinx            -0.38945578 -1.9015098 1.1225983
+##                                      p adj
+## Asian-African American           0.9973756
+## Caucasian-African American       0.9110923
+## Hispanic/Latinx-African American 0.9998930
+## Other-African American           0.9349685
+## Caucasian-Asian                  0.1748786
+## Hispanic/Latinx-Asian            0.9997690
+## Other-Asian                      0.9508614
+## Hispanic/Latinx-Caucasian        0.7512262
+## Other-Caucasian                  0.3869683
+## Other-Hispanic/Latinx            0.9535897</code></pre>
+<p>For Control condition:</p>
+<pre><code>##                      Df Sum Sq Mean Sq F value Pr(&gt;F)
+## factor(Control$race)  4   1.58  0.3954   0.481  0.749
+## Residuals            46  37.80  0.8217</code></pre>
+<pre><code>##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = Control$avgcheat ~ factor(Control$race))
+## 
+## $`factor(Control$race)`
+##                                         diff       lwr       upr     p adj
+## Asian-African American           -0.11224490 -1.269962 1.0454721 0.9986941
+## Caucasian-African American        0.29365079 -1.062682 1.6499838 0.9720414
+## Hispanic/Latinx-African American  0.03571429 -1.625448 1.6968762 0.9999967
+## Other-African American           -0.35714286 -2.018305 1.3040190 0.9727424
+## Caucasian-Asian                   0.40589569 -0.580198 1.3919894 0.7689606
+## Hispanic/Latinx-Asian             0.14795918 -1.227614 1.5235319 0.9980390
+## Other-Asian                      -0.24489796 -1.620471 1.1306748 0.9864249
+## Hispanic/Latinx-Caucasian        -0.25793651 -1.804394 1.2885211 0.9893793
+## Other-Caucasian                  -0.65079365 -2.197251 0.8956639 0.7543371
+## Other-Hispanic/Latinx            -0.39285714 -2.212569 1.4268546 0.9723281</code></pre>
+<p>For Low Cheat condition:</p>
+<pre><code>##                       Df Sum Sq Mean Sq F value Pr(&gt;F)
+## factor(LowCheat$race)  4   3.98  0.9954   0.811  0.525
+## Residuals             43  52.77  1.2273</code></pre>
+<pre><code>##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = LowCheat$avgcheat ~ factor(LowCheat$race))
+## 
+## $`factor(LowCheat$race)`
+##                                         diff       lwr      upr     p adj
+## Asian-African American           -1.83035714 -5.033111 1.372397 0.4888905
+## Caucasian-African American       -1.46428571 -4.809453 1.880882 0.7246831
+## Hispanic/Latinx-African American -1.78571429 -5.192266 1.620838 0.5729231
+## Other-African American           -1.42857143 -5.888795 3.031652 0.8907982
+## Caucasian-Asian                   0.36607143 -0.880599 1.612742 0.9178869
+## Hispanic/Latinx-Asian             0.04464286 -1.358438 1.447724 0.9999841
+## Other-Asian                       0.40178571 -2.800969 3.604540 0.9963840
+## Hispanic/Latinx-Caucasian        -0.32142857 -2.024705 1.381847 0.9829144
+## Other-Caucasian                   0.03571429 -3.309453 3.380882 0.9999998
+## Other-Hispanic/Latinx             0.35714286 -3.049409 3.763695 0.9982016</code></pre>
+<p>For High Cheat condition:</p>
+<pre><code>##                        Df Sum Sq Mean Sq F value Pr(&gt;F)
+## factor(HighCheat$race)  4   5.86   1.464   0.726  0.579
+## Residuals              46  92.77   2.017</code></pre>
+<pre><code>##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = HighCheat$avgcheat ~ factor(HighCheat$race))
+## 
+## $`factor(HighCheat$race)`
+##                                        diff        lwr      upr     p adj
+## Asian-African American            0.3348214 -3.7592790 4.428922 0.9993316
+## Caucasian-African American        1.0000000 -3.1730935 5.173094 0.9597385
+## Hispanic/Latinx-African American  0.5000000 -4.4376708 5.437671 0.9984514
+## Other-African American           -0.2857143 -5.2233851 4.651957 0.9998302
+## Caucasian-Asian                   0.6651786 -0.6266843 1.957041 0.5918956
+## Hispanic/Latinx-Asian             0.1651786 -2.7733233 3.103680 0.9998486
+## Other-Asian                      -0.6205357 -3.5590376 2.317966 0.9744662
+## Hispanic/Latinx-Caucasian        -0.5000000 -3.5475966 2.547597 0.9900214
+## Other-Caucasian                  -1.2857143 -4.3333109 1.761882 0.7526500
+## Other-Hispanic/Latinx            -0.7857143 -4.8173057 3.245877 0.9809871</code></pre>
+<p>Based on the ANOVA test and Tukey HSD, there is no significant difference in cheating behavior among followers of different racial groups across all conditions, and for each separate condition. We can see this since the p-values for the ANOVA tests are statistically insignificant (p &gt; 0.05).</p>
+<div id="potential-limitations" class="section level3">
+<h3>Potential limitations</h3>
+<p>A potential limitation to this analysis is that the distribution of participants are heavily skewed towards Asians, so there is not a normal distribution of participants by race.</p>
+<p>Additionally, this analysis looks at all followers unconditional on whether they cheated or not. If additional analyses can be done to look at the differences in cheating behavior for followers who did cheat in the experiment, there may be a significant difference in the cheating behavior across different races.</p>
+<p>Moreover, the leader’s race is not accounted for in this analysis, even though a leader’s race could potentially affect cheating behavior among followers that also identify with the same race as the leader.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

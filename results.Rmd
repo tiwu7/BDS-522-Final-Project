@@ -1,0 +1,71 @@
+---
+title: "Results"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(latexpdf)
+library(compareGroups)
+library(summarytools)
+library(Rmisc)
+setwd("/Users/SuburbanFoxes/Downloads/Website_template")
+MyData <- read_csv("/Users/SuburbanFoxes/Downloads/Website_template/NewData1 - 1.csv")
+MyData$reportavg<-(MyData$report2+MyData$report3+MyData$report4+MyData$report5+MyData$report6+MyData$report7)/6
+MyData$rollavg<-(MyData$`Roll-2A`+MyData$`Roll-2B`+MyData$`Roll-3A`+MyData$`Roll-3B`+MyData$`Roll-4A`+MyData$`Roll-4B`+MyData$`Roll-5A`+MyData$`Roll-5B`+MyData$`Roll-6A`+MyData$`Roll-6B`+MyData$`Roll-7A`+MyData$`Roll-7B`)/6
+MyData$CheatTotal<-MyData$reportavg-MyData$rollavg
+Control<-subset.data.frame(MyData,MyData$teamID==1|MyData$teamID==4|MyData$teamID==6|MyData$teamID==10|MyData$teamID==13|MyData$teamID==14|MyData$teamID==19|MyData$teamID==22|MyData$teamID==25|MyData$teamID==28|MyData$teamID==31|MyData$teamID==34|MyData$teamID==37|MyData$teamID==40|MyData$teamID==43|MyData$teamID==48|MyData$teamID==49)
+LowCheat<-subset.data.frame(MyData,MyData$teamID==2|MyData$teamID==5|MyData$teamID==8|MyData$teamID==11|MyData$teamID==15|MyData$teamID==16|MyData$teamID==20|MyData$teamID==23|MyData$teamID==26|MyData$teamID==29|MyData$teamID==32|MyData$teamID==35|MyData$teamID==38|MyData$teamID==41|MyData$teamID==44|MyData$teamID==47|MyData$teamID==50)
+HighCheat<-subset.data.frame(MyData,MyData$teamID==3|MyData$teamID==7|MyData$teamID==9|MyData$teamID==12|MyData$teamID==17|MyData$teamID==18|MyData$teamID==21|MyData$teamID==24|MyData$teamID==27|MyData$teamID==30|MyData$teamID==33|MyData$teamID==36|MyData$teamID==39|MyData$teamID==42|MyData$teamID==45|MyData$teamID==46|MyData$teamID==51)
+Control$Condition<-"Control"
+LowCheat$Condition<-"Low Cheat"
+HighCheat$Condition<-"High Cheat"
+FinalData<-rbind(Control,LowCheat,HighCheat)
+```
+
+## Results
+Below are the results from the ANOVA and post-hoc Tukey's HSD.
+
+Across all conditions:
+```{r echo=FALSE}
+exp_aovrace<-aov(FinalData$avgcheat~factor(FinalData$race))
+summary(exp_aovrace)
+exp_tukeyrace<-TukeyHSD(exp_aovrace)
+exp_tukeyrace
+```
+
+For Control condition:
+```{r echo=FALSE}
+exp_aovrace<-aov(Control$avgcheat~factor(Control$race))
+summary(exp_aovrace)
+exp_tukeyrace<-TukeyHSD(exp_aovrace)
+exp_tukeyrace
+```
+
+For Low Cheat condition:
+```{r echo=FALSE}
+exp_aovrace<-aov(LowCheat$avgcheat~factor(LowCheat$race))
+summary(exp_aovrace)
+exp_tukeyrace<-TukeyHSD(exp_aovrace)
+exp_tukeyrace
+```
+
+For High Cheat condition:
+```{r echo=FALSE}
+exp_aovrace<-aov(HighCheat$avgcheat~factor(HighCheat$race))
+summary(exp_aovrace)
+exp_tukeyrace<-TukeyHSD(exp_aovrace)
+exp_tukeyrace
+```
+
+Based on the ANOVA test and Tukey HSD, there is no significant difference in cheating behavior among followers of different racial groups across all conditions, and for each separate condition. We can see this since the p-values for the ANOVA tests are statistically insignificant (p > 0.05). 
+
+### Potential limitations
+A potential limitation to this analysis is that the distribution of participants are heavily skewed towards Asians, so there is not a normal distribution of participants by race.
+
+Additionally, this analysis looks at all followers unconditional on whether they cheated or not. If additional analyses can be done to look at the differences in cheating behavior for followers who did cheat in the experiment, there may be a significant difference in the cheating behavior across different races.
+
+Moreover, the leader's race is not accounted for in this analysis, even though a leader's race could potentially affect cheating behavior among followers that also identify with the same race as the leader.
+

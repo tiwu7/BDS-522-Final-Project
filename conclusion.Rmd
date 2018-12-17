@@ -1,0 +1,17 @@
+---
+title: "Conclusion"
+---
+
+## Conclusion
+The ANOVA and post-hoc Tukey shows that there is no significant difference in cheating behavior for followers of different races across all conditions, and for each separate condition. Therefore we fail to reject the null hypothesis.
+
+### Potential explanations
+The most obvious potential explanation for this result is that there just does not exist differences in cheating behavior across different races, since race does not determine whether someone is inherently more likely to cheat than a person of a different race.
+
+However, another potential explanation for this result (based on results from our main study) is that followers believe that cheating is not an acceptable option for them to take during the study. We found that most participants failed to understand that they could misreport their own dice rolls when completing the comprehension check. Additionally, it could be that followers perceive leaders as having a separate set of instructions that are exclusive to them, and so there is no perceived incentive for followers to deviate from their own expected behavior (if they expect to just report their dice roll accurately). So regardless of race, followers would most likely either not understand that cheating is an available option, or that they feel no incentive to cheat individually. Therefore, the amount of cheating would probably be insignificant across all followers.
+
+
+### Implications
+Some implications are that even if a dishonest leader does influence the behavior of his or her followers, followers are probably unlikely to imitate their leader. Even if followers do imitate their leader and cheat, there probably are no significant differences in cheating behavior across different races (even when controlling for different magnitudes in cheating behavior of leaders). 
+
+However, future extensions of this study can potentially look to see if peers have more influence over whether dishonest behavior is diffused in a group. Perhaps in-group and out-group peer effects based on racial identity can also be tested to see if cheating behavior may significantly differ in those conditions.

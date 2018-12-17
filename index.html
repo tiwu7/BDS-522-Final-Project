@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Introduction</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">BDS 522 Final Project</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Introduction</a>
+</li>
+<li>
+  <a href="data.html">Data and Methods</a>
+</li>
+<li>
+  <a href="results.html">Results</a>
+</li>
+<li>
+  <a href="conclusion.html">Conclusion</a>
+</li>
+<li>
+  <a href="references.html">References</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Introduction</h1>
+
+</div>
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>(Note: this is an extension of my BDS 501 group project, which examined how dishonest leaders can affect dishonest behavior in followers.)</p>
+<p>Behaviors are contagious. From quitting smoking to divorce, researchers have found that we are more likely to adopt the behaviors that we see others engaging in (McDermott, Fowler &amp; Christakis, 2009). In the wake of recent corporate scandals, scholars and practitioners have become increasingly convinced that such a behavioral contagion effect exists in the context of ethics and leadership as well (Trevino, Brown &amp; Hartman, 2003): to a large degree, employees tend to calibrate their behavior according to their leader’s actions (“When something is rotten”, 2002). Despite this general consensus, the relationship between leader behavior and (un)ethical conduct among followers has only recently been examined experimentally and is still not fully understood (d’Adda et al., 2017).</p>
+<p>A particular limitation of past research that examines the relationship between leader and follower behavior, is that the majority of studies have relied on indirect mechanisms to make a leader’s behavior known to other participants. Indirect mechanisms refer to the use of public announcements by leaders to convey their decisions to others; indirect mechanisms also encompass the use of incentives to induce certain behavior among followers (d’Adda et al., 2017). While these techniques do reflect some strategies that leaders utilize in real life, it is also common for leaders to directly act in a way that sets an observable precedent for the rest of the company to follow. Interestingly, this type of leader strategy seems to appear in many high-profile corporate scandals, such as the case of WorldCom or Theranos, where top executives tend to take unethical actions into their own hands (such as by overinflating financial performance), which in turn often triggers a “trickle-down” effect among employees who then also engage in unethical practices (such by writing fraudulent reports to mislead investors) (Tran, 2002). This notion that followers, in a sense, adopt behaviors by directly observing their leader’s actions could play an important role in explaining how behavior is diffused within an organization, especially when such behavior is unethical.</p>
+<p>In order to test this relationship, we utilize a repeated dice game, similar to the one used by d’Adda et al. (2017). The basic repeated game works in the following manner: in each round, followers privately roll a dice and then publicly report their dice roll (either accurately or not depending on the direction of their leader’s encouragement); the rounds proceed in the same way until the game is over. In our study, however, we modify this set up and procedure such that the dice game is played in teams of four individuals, i.e. three followers and one randomly assigned leader. The followers must report their (private) dice rolls to the leader, who then calculates the total team score i.e. the sum of the three follower’s reported dice roll. This set up is novel as leaders publicly calculate the team’s total performance, i.e. on a whiteboard, in order to make the leader’s actions directly observable by the entire team. Depending on the treatment, the leader either accurately calculates the correct team score, or he or she records an inflated team score by adding an additional small or large value to the team total.</p>
+<p>Based on our set-up, leaders could influence unethical follower behavior through two channels; it might be the case that the mere existence of leader dishonesty might be sufficient induce followers to imitate their leader and cheat as well. Another potential channel may be that a higher magnitude of leader cheating behavior might make the option to cheat more salient and acceptable to followers. In this case, followers would have a larger range of opportunity to also cheat, which might also increase the level of cheating.</p>
+<p>A potentially interesting dimension to explore within this study–and for the purposes of this project–is whether or not there are significant differences in cheating behavior across followers of different races. In particular, will followers of a certain race be more inclined to cheat when they observe their leader cheating? This question may be interesting because they are particularly relevant given the current (unfortunate) social and political climate in the United States, and given the sharp increase in overt racism and racial stereotyping in the country.</p>
+<div id="hypotheses" class="section level3">
+<h3>Hypotheses</h3>
+<p>My research hypotheses are as follows:</p>
+<p><span class="math inline">\(H_0\)</span> = there will be no significant difference in cheating behavior among followers of different races when they observe their leader cheating.</p>
+<p><span class="math inline">\(H_1\)</span> = there will be a difference in cheating behavior among followers of different races when they observe their leader cheating.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
