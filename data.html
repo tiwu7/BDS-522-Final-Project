@@ -212,8 +212,6 @@ $(document).ready(function () {
 </div>
 
 
-<div id="data-and-methods" class="section level2">
-<h2>Data and Methods</h2>
 <div id="data" class="section level3">
 <h3>Data</h3>
 <p>The data that will be used for this analysis has been collected by my team members and I as part of our BDS 501 project. We conducted our experiment at Penn on both undergraduate and graduate Penn students. In total, we had a total of 205 participants, which can be further broken down into 51 teams comprising of 51 leaders and 154 followers. Since we are only interested in follower behavior, we have a total of 150 observations (accounting for a few cases where participants had to be excluded due to the leader not following instructions). The relevant data which has been broadly organized by types and their respective categories can be seen in the table below.</p>
@@ -260,18 +258,21 @@ $(document).ready(function () {
 </tbody>
 </table>
 <p>An additional breakdown of participants’ race by condition can be seen below. In the Control condition, the leader reports the team score accurately (i.e. add 0 to the final team score); in the Low Cheat condition, the leader overreports the team score slightly (i.e. add 1-4 to the final team score); and in the High Cheat condition, the leader overreports the team score by a lot (i.e. add 5-9 to the final team score).</p>
-<pre><code>## &lt;!-- html table generated in R 3.5.1 by xtable 1.8-2 package --&gt;
-## &lt;!-- Mon Dec 17 15:46:56 2018 --&gt;
-## &lt;table border=1&gt;
-## &lt;tr&gt; &lt;th&gt;   &lt;/th&gt; &lt;th&gt; Control &lt;br/&gt; N=51 &lt;/th&gt; &lt;th&gt; High Cheat &lt;br/&gt; N=51 &lt;/th&gt; &lt;th&gt; Low Cheat &lt;br/&gt; N=48 &lt;/th&gt; &lt;th&gt;  N  &lt;/th&gt;  &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td&gt; race: &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;             &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;             &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;             &lt;/td&gt; &lt;td align=&quot;center&quot;&gt; 150 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;African American &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  6 (11.8%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  1 (1.96%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  1 (2.08%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;     &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Asian &lt;/td&gt; &lt;td align=&quot;center&quot;&gt; 28 (54.9%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt; 32 (62.7%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt; 32 (66.7%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;     &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Caucasian &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  9 (17.6%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt; 14 (27.5%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  8 (16.7%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;     &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Hispanic/Latinx &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  4 (7.84%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  2 (3.92%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  6 (12.5%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;     &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Other &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  4 (7.84%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  2 (3.92%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;  1 (2.08%)  &lt;/td&gt; &lt;td align=&quot;center&quot;&gt;     &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td&gt; age &lt;/td&gt; &lt;td align=&quot;center&quot;&gt; 22.0 (4.14) &lt;/td&gt; &lt;td align=&quot;center&quot;&gt; 21.6 (3.02) &lt;/td&gt; &lt;td align=&quot;center&quot;&gt; 21.7 (2.83) &lt;/td&gt; &lt;td align=&quot;center&quot;&gt; 149 &lt;/td&gt; &lt;/tr&gt;
-##    &lt;/table&gt;</code></pre>
+<pre><code>## 
+## --------Summary descriptives table by &#39;Condition&#39;---------
+## 
+## ____________________________________________________________ 
+##                        Control   High Cheat   Low Cheat   N  
+##                         N=51        N=51        N=48         
+## ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ 
+## race:                                                    150 
+##     African American  6 (11.8%)   1 (1.96%)   1 (2.08%)      
+##     Asian            28 (54.9%)  32 (62.7%)  32 (66.7%)      
+##     Caucasian         9 (17.6%)  14 (27.5%)   8 (16.7%)      
+##     Hispanic/Latinx   4 (7.84%)   2 (3.92%)   6 (12.5%)      
+##     Other             4 (7.84%)   2 (3.92%)   1 (2.08%)      
+## age                  22.0 (4.14) 21.6 (3.02) 21.7 (2.83) 149 
+## ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</code></pre>
 <p>Included below is also some summary statistics on the average amount cheated by followers, broken down by condition.</p>
 </div>
 <div id="descriptive-statistics" class="section level3">
@@ -330,7 +331,6 @@ $(document).ready(function () {
 <div id="methods" class="section level3">
 <h3>Methods</h3>
 <p>For the purposes of testing my hypotheses, I will be using an ANOVA to see if there are any significant differences in cheating behavior among followers of differenct races across all conditions. I will be specifically looking to see if significant differences in the average amount cheated for different races exist. I will also run Tukey’s HSD to provide a breakdown of which specific groups’s means compared with each other are different (if there are any). Using an ANOVA is an appropriate method since I will be testing for differences between two or more means, or in my context, racial groups. Running a Tukey’s HSD is also an appropriate, though potentially unnecessary post-hoc test since it usually accompanies an ANOVA test.</p>
-</div>
 </div>
 
 

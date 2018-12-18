@@ -2,7 +2,6 @@
 title: "Conclusion"
 ---
 
-## Conclusion
 The ANOVA and post-hoc Tukey shows that there is no significant difference in cheating behavior for followers of different races across all conditions, and for each separate condition. Therefore we fail to reject the null hypothesis.
 
 ### Potential explanations

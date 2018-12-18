@@ -25,8 +25,6 @@ HighCheat$Condition<-"High Cheat"
 FinalData<-rbind(Control,LowCheat,HighCheat)
 ```
 
-## Data and Methods
-
 ### Data
 
 The data that will be used for this analysis has been collected by my team members and I as part of our BDS 501 project. We conducted our experiment at Penn on both undergraduate and graduate Penn students. In total, we had a total of 205 participants, which can be further broken down into 51 teams comprising of 51 leaders and 154 followers. Since we are only interested in follower behavior, we have a total of 150 observations (accounting for a few cases where participants had to be excluded due to the leader not following instructions). The relevant data which has been broadly organized by types and their respective categories can be seen in the table below. 
@@ -47,7 +45,7 @@ An additional breakdown of participants' race by condition can be seen below. In
 Descriptives2 <- compareGroups(Condition ~ race + age, data=FinalData)
 
 Descriptives2Table <- createTable(Descriptives2, show.n=TRUE, show.p.overall=FALSE)
-export2html(Descriptives2Table)
+Descriptives2Table
 ```
 
 
@@ -68,5 +66,3 @@ boxplot(avgcheat~race, data=FinalData, main="Average Cheating by Race")
 ### Methods
 
 For the purposes of testing my hypotheses, I will be using an ANOVA to see if there are any significant differences in cheating behavior among followers of differenct races across all conditions. I will be specifically looking to see if significant differences in the average amount cheated for different races exist. I will also run Tukey's HSD to provide a breakdown of which specific groups's means compared with each other are different (if there are any). Using an ANOVA is an appropriate method since I will be testing for differences between two or more means, or in my context, racial groups. Running a Tukey's HSD is also an appropriate, though potentially unnecessary post-hoc test since it usually accompanies an ANOVA test.
-
-

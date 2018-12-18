@@ -25,7 +25,7 @@ HighCheat$Condition<-"High Cheat"
 FinalData<-rbind(Control,LowCheat,HighCheat)
 ```
 
-## Results
+
 Below are the results from the ANOVA and post-hoc Tukey's HSD.
 
 Across all conditions:

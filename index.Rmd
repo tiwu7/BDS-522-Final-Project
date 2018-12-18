@@ -2,7 +2,6 @@
 title: "Introduction"
 ---
 
-## Introduction
 (Note: this is an extension of my BDS 501 group project, which examined how dishonest leaders can affect dishonest behavior in followers.)
 
 Behaviors are contagious. From quitting smoking to divorce, researchers have found that we are more likely to adopt the behaviors that we see others engaging in (McDermott, Fowler & Christakis, 2009). In the wake of recent corporate scandals, scholars and practitioners have become increasingly convinced that such a behavioral contagion effect exists in the context of ethics and leadership as well (Trevino, Brown & Hartman, 2003): to a large degree, employees tend to calibrate their behavior according to their leader’s actions (“When something is rotten”, 2002). Despite this general consensus, the relationship between leader behavior and (un)ethical conduct among followers has only recently been examined experimentally and is still not fully understood (d’Adda et al., 2017). 
